@@ -24,7 +24,7 @@ function HomePage(){
     let [itemsInDatabase, newItemsInDatabase]=useState(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{ 
         // let star=items.star===1?<AiFillStar/>:items.star===2?<div><AiFillStar/><AiFillStar/></div>:items.star===3?<div><AiFillStar/><AiFillStar/><AiFillStar/></div>:items.star===4?<div><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/></div>:items.star===5&&<div><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/></div>
         return(
-            <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} />
+            <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
         ) 
     }))
 
@@ -38,7 +38,7 @@ function HomePage(){
         newItemsInDatabase(filtereditemsInDatabase.map((items, index)=>{
             console.log(index)
             return(
-                <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} />
+                <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
             ) 
         }))
     }
@@ -52,7 +52,7 @@ function HomePage(){
         setPendingTaskBackgound({backgroundColor:"transparent", color:"black"})
         newItemsInDatabase(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{
             
-            return items.pending===false&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} />
+            return items.pending===false&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
         }))
     }   
     function filterBYPendingTask(){
@@ -61,7 +61,7 @@ function HomePage(){
         newItemsInDatabase(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{
             
             return(
-                items.pending===true&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} />
+                items.pending===true&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
             ) 
         }))
     }

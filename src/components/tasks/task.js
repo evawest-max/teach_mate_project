@@ -48,11 +48,14 @@ export default function Task(props) {
     <div className='task-container'>
       <div className='task-title-duedate-container'>
         <h3 className='task-title'>{props.title}</h3>
+        <div className='status-container'>
         <p className='task-duedate'>Due on: {props.date}</p>
+        {props.pending? <p className='status'> Status: pending</p> :<p className='status'>Status: Completed</p>}
+        </div>
       </div>
       <p className='task-discription'>{props.discription}</p>
       <button className='edit-task-button' onClick={openEditForm}>Edit</button>
-      <button className='edit-task-button' onClick={markAsCompleted} >completed</button>
+      <button className='edit-task-button' onClick={markAsCompleted} >completed?</button>
       
 
       <div style={editFormStyle} className='edit-task-form-container'>
