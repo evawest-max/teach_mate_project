@@ -17,30 +17,35 @@ function HomePage(){
         task.openCreateForm()
     }
     // function openSigninPage(){
-    //     task.openSignInForm()
+    //     task.openSignIif (localStorage.getItem('teachMateloggedinUser')!==null){nForm()
     // }
     let users=localStorage.getItem('teachMateloggedinUser')!==null&&JSON.parse(localStorage.getItem('teachMateloggedinUser'))
     let usersTasks=users.task
-    let [itemsInDatabase, newItemsInDatabase]=useState(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{ 
-        // let star=items.star===1?<AiFillStar/>:items.star===2?<div><AiFillStar/><AiFillStar/></div>:items.star===3?<div><AiFillStar/><AiFillStar/><AiFillStar/></div>:items.star===4?<div><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/></div>:items.star===5&&<div><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/></div>
-        return(
-            <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
-        ) 
-    }))
+    let [itemsInDatabase, newItemsInDatabase]=useState()
 
     let inputRef= useRef()
     function findTask(){
-        const filtereditemsInDatabase= localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).filter((items)=>{
-            return items.title.toLocaleLowerCase().includes(inputRef.current.value.toLocaleLowerCase())
-        })
-        console.log(filtereditemsInDatabase)
-        
-        newItemsInDatabase(filtereditemsInDatabase.map((items, index)=>{
-            console.log(index)
-            return(
-                <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
-            ) 
-        }))
+        if (localStorage.getItem('teachMateloggedinUser')!==null){
+
+            if (JSON.parse(localStorage.getItem('teachMateloggedinUser')).task){
+                const filtereditemsInDatabase= localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).filter((items)=>{
+                    return items.title.toLocaleLowerCase().includes(inputRef.current.value.toLocaleLowerCase())
+                })
+                console.log(filtereditemsInDatabase)
+                
+                newItemsInDatabase(filtereditemsInDatabase.map((items, index)=>{
+                    console.log(index)
+                    return(
+                        <Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
+                    ) 
+                }))
+            }else{
+                alert("you have not created any task. click on create task to create task")
+            }
+        }else{
+            alert("please Sign in")
+        }
+
     }
 
     
@@ -50,20 +55,38 @@ function HomePage(){
     function filterByCompletedTask(){
         setCompletedTaskBackgound({backgroundColor:"rgb(32, 0, 128)", color:"white"})
         setPendingTaskBackgound({backgroundColor:"transparent", color:"black"})
-        newItemsInDatabase(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{
+        if (localStorage.getItem('teachMateloggedinUser')!==null){
             
-            return items.pending===false&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
-        }))
+            if (JSON.parse(localStorage.getItem('teachMateloggedinUser')).task ){
+                newItemsInDatabase(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{
+                    
+                    return items.pending===false&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
+                }))
+            }else{
+                alert("you have not created any task. click on create task to create task")
+            }
+        }else{
+            alert("please Sign in")
+        }
     }   
     function filterBYPendingTask(){
         setCompletedTaskBackgound({backgroundColor:"transparent", color:"black"})
         setPendingTaskBackgound({backgroundColor:"rgb(32, 0, 128)", color:"white"})
-        newItemsInDatabase(localStorage.getItem('teachMateloggedinUser')!==null&&Object.values(usersTasks).map((items, index)=>{
-            
-            return(
-                items.pending===true&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
-            ) 
-        }))
+        if (localStorage.getItem('teachMateloggedinUser')!==null){
+
+            if (JSON.parse(localStorage.getItem('teachMateloggedinUser')).task){
+                newItemsInDatabase(JSON.parse(localStorage.getItem('teachMateloggedinUser')).task!==null&&Object.values(usersTasks).map((items, index)=>{
+                    
+                    return(
+                        items.pending===true&&<Task key={index}  id={items.post_id} discription={items.discription} title={items.title} date={items.date} pending={items.pending}/>
+                    ) 
+                }))
+            }else{
+                alert("you have not created any task. click on create task to create task")
+            }
+        }else{
+            alert("please Sign in")
+        }
     }
 
     if (localStorage.getItem("teachMateloggedinUser")!==null){

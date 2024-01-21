@@ -1,9 +1,9 @@
 import { getDatabase, ref, set } from "firebase/database"
 import "./signUp.css"
 import React, { useContext, useRef, useState } from 'react'
-import { getStorage } from "firebase/storage"
+import { getStorage, uploadBytes, ref as storageRef, getDownloadURL } from "firebase/storage"
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth"
-import { auth, provider } from "../firebase config/firebaseConfig"
+import { auth, provider, storage } from "../firebase config/firebaseConfig"
 import { Link } from "react-router-dom"
 import { FaWindowClose } from "react-icons/fa";
 import { TaskContext } from "../context/appContext"
@@ -77,11 +77,36 @@ export default function SignUp() {
                             id:user.uid,
                             name:nameref.current.value,
                             email:emailref.current.value,
+                            passport:`customer passport/ ${user.uid}`,
                         }
                         const db = ref(getDatabase(),"users/"+user.uid, );
                         await set(db, postData).then(() => {
                         })
-                       
+                        
+
+                        const serverimageref= storageRef(getStorage(), `passport/${user.uid}`) 
+                        await getDownloadURL(serverimageref)
+                        .then(url=>{console.log(url.exist())})   
+                        .catch(()=>{
+                          fetch("https://robohash.org/lkj").then(res => {
+                            return res.blob();
+                          }).then(blob => {
+                              //uploading blob to firebase storage
+                              uploadBytes(serverimageref, blob).then((snapshot) => {
+                                  console.log('Uploaded a blob or file!');
+                                }).catch((error)=>{console.log(error)});
+                          }).catch(error=>{
+                            alert("the image was not uploaded.")
+                          })
+
+                        })
+
+
+                    
+                        
+                        // await uploadBytes(serverimageref, message4, "https://robohash.org/lkj").then((snapshot) => {
+                        //   console.log('Uploaded a blob or file!');
+                        // }).catch((error)=>{console.log(error)});
                             
                         await sendEmailVerification(auth.currentUser)
                         .then(() => {

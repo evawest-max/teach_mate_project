@@ -91,6 +91,7 @@ function TaskProvider({children}){
             })
            
             localStorage.setItem('teachMateloggedinUser', JSON.stringify({...data.val(), imageaddress:imageUrl}))
+            alert("welcome! you can now add task")
             setloginIcon(
               <div className="login-container">
               <img src={picUrl} width="20px" height="20px" alt='user pic'/>
@@ -110,7 +111,8 @@ function TaskProvider({children}){
       async function keepuserloggedin(){
         let ur=""
         if (localStorage.getItem('teachMateloggedinUser') !== null){
-        await getDownloadURL(refStorage(getStorage(), `passport/${JSON.parse(localStorage.getItem('teachMateloggedinUser')).id}`))
+          let myId=JSON.parse(localStorage.getItem('teachMateloggedinUser'))
+        await getDownloadURL(refStorage(getStorage(), `passport/${myId.id}`))
                 .then((url) => {
                   ur=url
                 }).catch(error=>{alert(error)})
