@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import "./task.css"
 import { getDatabase, ref, update } from 'firebase/database'
+import { IoMdDoneAll } from "react-icons/io";
 
 export default function Task(props) {
   const [editFormStyle, setEditFormStyle]=useState({display:"none"})
@@ -54,8 +55,8 @@ export default function Task(props) {
         </div>
       </div>
       <p className='task-discription'>{props.discription}</p>
-      <button className='edit-task-button' onClick={openEditForm}>Edit</button>
-      <button className='edit-task-button' onClick={markAsCompleted} >completed?</button>
+      {props.pending===false?"":<button className='edit-task-button' onClick={openEditForm}>Edit</button>}
+      {props.pending&&<button className='complete-task-button' onClick={markAsCompleted} ><IoMdDoneAll /></button>}
       
 
       <div style={editFormStyle} className='edit-task-form-container'>

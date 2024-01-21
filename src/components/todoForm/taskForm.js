@@ -49,6 +49,7 @@ export default function TaskForm() {
 
   return (
     <div style={task.formStyle} className='task-form-container'>
+      <h3>Create a task</h3>
       <form>
         <input ref={titleRef} type='text' required autoFocus placeholder='Title' className='task-title-input'/>
         <input ref={dateRef} type='date' required min="01-20-2024" className='date-input'/>

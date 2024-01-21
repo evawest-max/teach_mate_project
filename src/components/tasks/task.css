@@ -1,10 +1,7 @@
 .task-container{
-    /* border: 3px solid black; */
-    text-align: center;
-    max-width: 100%;
-    /* max-width: 30%; */
+    /* max-width: 50%;
+    min-width: 50%; */
     border-radius: 10px;
-    /* max-width: 50%; */
     background-color: rgb(246, 243, 254);
     border-left: 2px solid rgb(32, 0, 128);
     position: relative;
@@ -13,9 +10,14 @@
     /* border: 3px solid red; */
     display: flex;
     justify-content: space-around;
+    font-weight: 600;
 }
 .task-discription{
-    margin: 5px;
+    /* border: 3px solid black; */
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
 }
 .edit-task-button{
     background-color: rgb(32, 0, 128);
@@ -23,6 +25,19 @@
     width: 50%;
     height: 40px;
     border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.complete-task-button{
+    background-color: rgb(32, 0, 128);
+    color: white;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    font-size: larger;
 }
 
 .edit-task-form-container {
@@ -48,7 +63,7 @@
 .edit-task-title-input{
     border-radius: 10px;
     height: 40px;
-    
+    width: 50%;
 }
 .edit-date-input{
     border-radius: 10px;
@@ -86,4 +101,110 @@
     background: transparent;
 
     /* border-color: rgb(32, 0, 128); */
+}
+
+@media screen and (min-width:350px){
+    .task-container{
+        /* border: 3px solid black; */
+        text-align: center;
+        border-radius: 10px;
+        background-color: rgb(246, 243, 254);
+        border-left: 2px solid rgb(32, 0, 128);
+        position: relative;
+    }
+    .task-title-duedate-container{
+        /* border: 3px solid red; */
+        display: flex;
+        justify-content: space-around;
+        font-weight: 600;
+    }
+    .task-discription{
+        /* border: 3px solid black; */
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 50px;
+    }
+    .edit-task-button{
+        background-color: rgb(32, 0, 128);
+        color: white;
+        width: 50%;
+        height: 40px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    .complete-task-button{
+        background-color: rgb(32, 0, 128);
+        color: white;
+        width: 50%;
+        height: 40px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0px;
+    }
+    
+    .edit-task-form-container {
+        /* border: 3px solid red; */
+        flex-direction: column;
+        width: fit-content;
+        border-left: 2px solid rgb(32, 0, 128);
+        padding: 1.25rem;
+        border-radius: 10px;
+        background-color: rgb(246, 243, 254);
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+    
+    }
+    .edit-task-form-container form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 4rem;
+        gap: 2rem;
+        /* position: relative; */
+    }
+    .edit-task-title-input{
+        border-radius: 10px;
+        height: 40px;
+        
+    }
+    .edit-date-input{
+        border-radius: 10px;
+        height: 40px;
+        width: 100%;
+    }
+    .edit-discription-input{
+        border-radius: 10px;
+        height: 100px;
+        width: 120%;
+        margin-bottom: 10px;
+    }
+    .edit-task-form-button-container{
+        display: flex;
+        justify-content: space-between;
+        /* border: 3px solid; */
+    }
+    .edit-create-task-button{
+        background-color: rgb(32, 0, 128);
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: bolder;
+        font-size: 100%;
+        height: 40%;
+        width: 100%;
+    }
+    .edit-cancle-task-button{
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: bolder;
+        font-size: 100%;
+        height: 40%;
+        width: 100%;
+        background: transparent;
+    
+        /* border-color: rgb(32, 0, 128); */
+    }
 }
