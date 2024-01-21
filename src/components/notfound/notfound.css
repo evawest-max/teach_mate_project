@@ -1,0 +1,10 @@
+.notfound-container{
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, #036735 0%, #01000A 100%);
+
+}
+.notfound-container p a{
+    color: rgb(248, 125, 248);
+}

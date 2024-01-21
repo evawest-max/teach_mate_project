@@ -1,0 +1,19 @@
+/*body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
+body{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3cpath d='M -397.98488465154423%2c147 C -301.98%2c216.8 -109.98%2c495 82.0151153484558%2c496 C 274.02%2c497 370.02%2c153.2 562.0151153484558%2c152 C 754.02%2c150.8 850.02%2c506.2 1042.0151153484558%2c490 C 1234.02%2c473.8 1442.42%2c83.6 1522.0151153484558%2c71 C 1601.61%2c58.4 1456.4%2c355.8 1440%2c427' stroke='rgba(236%2c 244%2c 249%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -604.4250675048204%2c444 C -508.43%2c376 -316.43%2c92.4 -124.42506750482042%2c104 C 67.57%2c115.6 163.57%2c473.2 355.5749324951796%2c502 C 547.57%2c530.8 643.57%2c283.8 835.5749324951796%2c248 C 1027.57%2c212.2 1194.69%2c327 1315.5749324951796%2c323 C 1436.46%2c319 1415.11%2c247 1440%2c228' stroke='rgba(236%2c 244%2c 249%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -586.2748786885752%2c244 C -490.27%2c265.4 -298.27%2c352.4 -106.27487868857521%2c351 C 85.73%2c349.6 181.73%2c217.8 373.7251213114248%2c237 C 565.73%2c256.2 661.73%2c481 853.7251213114248%2c447 C 1045.73%2c413 1216.47%2c93.4 1333.7251213114248%2c67 C 1450.98%2c40.6 1418.75%2c265.4 1440%2c315' stroke='rgba(236%2c 244%2c 249%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -526.1882858981878%2c248 C -430.19%2c270 -238.19%2c375.2 -46.18828589818779%2c358 C 145.81%2c340.8 241.81%2c172 433.8117141018122%2c162 C 625.81%2c152 721.81%2c284.6 913.8117141018122%2c308 C 1105.81%2c331.4 1288.57%2c253.2 1393.8117141018122%2c279 C 1499.05%2c304.8 1430.76%2c405.4 1440%2c437' stroke='rgba(236%2c 244%2c 249%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -469.98192304428864%2c194 C -373.98%2c251.2 -181.98%2c492.8 10.01807695571138%2c480 C 202.02%2c467.2 298.02%2c138 490.01807695571136%2c130 C 682.02%2c122 778.02%2c426.2 970.0180769557114%2c440 C 1162.02%2c453.8 1356.02%2c192.6 1450.0180769557114%2c199 C 1544.01%2c205.4 1442%2c417.4 1440%2c472' stroke='rgba(236%2c 244%2c 249%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -259.5549950063501%2c218 C -163.55%2c232.4 28.45%2c296.6 220.4450049936499%2c290 C 412.45%2c283.4 508.45%2c174.4 700.44500499365%2c185 C 892.45%2c195.6 988.45%2c343.8 1180.44500499365%2c343 C 1372.45%2c342.2 1608.53%2c171 1660.44500499365%2c181 C 1712.36%2c191 1484.09%2c350.6 1440%2c393' stroke='rgba(236%2c 244%2c 249%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-attachment: fixed;
+    position: relative;
+}

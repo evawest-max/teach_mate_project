@@ -1,0 +1,30 @@
+.filter-container{
+    display: flex;
+    text-align: center;
+    border: 3px solid rgb(32, 0, 128);
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+.completed-task{
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /* color: white; */
+    /* background-color: rgb(32, 0, 128); */
+    font-weight: bold;
+    font-size: 80%;
+    border: none;
+}
+.pending-task{
+    width: 100%;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* color: white; */
+    /* background-color: rgb(32, 0, 128); */
+    font-weight: bold;
+    font-size: 80%;
+    border: none;
+}

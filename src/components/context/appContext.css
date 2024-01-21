@@ -1,0 +1,39 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    border: 3px solid;
+    vertical-align: center;
+    font-weight: bolder;
+    margin-right: 20px;
+    margin-left: auto;
+    border-radius: 10px;
+}
+.login-container button{
+    color: white;
+    background-color: rgb(32, 0, 128);
+}
+.login-container img{
+   margin-top: 15px;
+}
+
+.signin-signup-button{
+    display: flex;
+    /* background-color: rgb(32, 0, 128); */
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 100%;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 40px;
+    width: 20%;
+    max-width: 200px;
+}
+.signin-signup-button button{
+    color: white;
+    background-color: rgb(32, 0, 128);
+    border-radius: 10px;
+    font-weight: bolder;
+}
