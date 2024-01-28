@@ -1,23 +1,37 @@
 .task-container{
     /* max-width: 50%;
     min-width: 50%; */
+    padding-bottom: 50px;
     border-radius: 10px;
     background-color: rgb(246, 243, 254);
     border-left: 2px solid rgb(32, 0, 128);
     position: relative;
+    /* border: 3px solid red; */
+    width: 100%;
+    box-shadow: 3px 3px 5px 0px rgb(32, 0, 128);
 }
 .task-title-duedate-container{
     /* border: 3px solid red; */
     display: flex;
     justify-content: space-around;
-    font-weight: 600;
+    font-weight: 100%;
+}
+.task-duedate{
+    font-size: 80%;
+}
+.status{
+    font-size: 80%;
+}
+.task-title{
+    font-size: 80%;
 }
 .task-discription{
     /* border: 3px solid black; */
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 50px;
+    /* margin-bottom: 500px; */
+    font-size: 80%;
 }
 .edit-task-button{
     background-color: rgb(32, 0, 128);
@@ -37,7 +51,7 @@
     border-radius: 10px;
     position: absolute;
     bottom: 0px;
-    font-size: larger;
+    font-size: 100%;
 }
 
 .edit-task-form-container {
@@ -45,12 +59,12 @@
     flex-direction: column;
     width: fit-content;
     border-left: 2px solid rgb(32, 0, 128);
-    padding: 1.25rem;
+    padding: 10%;
     border-radius: 10px;
     background-color: rgb(246, 243, 254);
     position: absolute;
     bottom: 0px;
-    right: 20px;
+    right: 0px;
 
 }
 .edit-task-form-container form{
@@ -117,6 +131,15 @@
         display: flex;
         justify-content: space-around;
         font-weight: 600;
+    }
+    .task-duedate{
+        font-size: 80%;
+    }
+    .status{
+        font-size: 80%;
+    }
+    .task-title{
+        font-size: 80%;
     }
     .task-discription{
         /* border: 3px solid black; */

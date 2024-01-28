@@ -112,10 +112,9 @@ function HomePage(){
             </div>
             <div className="title-and-search-create-intro-container">
                 <div className="title-and-search-create-container">
-                    <div className="icon-title-container">
-                        <p><FaTasks /></p>
-                        <h3 className="title">Task Management Dashboard</h3>
-                    </div>
+                    {/* <div className="icon-title-container"> */}
+                        <h3 className="title"><span><FaTasks /></span> Task Management Dashboard</h3>
+                    
                     <input onChange={findTask} ref={inputRef} type="text" placeholder="search" className="search-input"/>
                     <button onClick={openCreateForms} className="start-create-task-button">Create Task</button>
                 </div>

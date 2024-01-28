@@ -52,7 +52,7 @@ function TaskProvider({children}){
 
     const [loginIcon, setloginIcon]= useState(
         <div className="signin-signup-button">
-          <div><FaUserCircle /></div>
+          {/* <div><FaUserCircle /></div> */}
           <button  onClick={openSignInForm}>Signin/Signup</button>
         </div>)
 
@@ -131,7 +131,7 @@ function TaskProvider({children}){
             
         setloginIcon(
           <div className="login-container">
-            <img src={ur} width="20px" height="20px" alt='user pic'/> 
+            <img src={ur} alt='user pic'/> 
            
             <p className='login-name-on-navbar'> {fullnameAb}</p>
             <button onClick={signout}>Signout</button>
@@ -144,7 +144,7 @@ function TaskProvider({children}){
         setuserloggedin({})
         setloginIcon(
           <div className="signin-signup-button">
-            <div><FaUserCircle /></div>
+            {/* <div><FaUserCircle /></div> */}
             <button  onClick={openSignInForm}>Signin/Signup</button>
           </div>)
         localStorage.removeItem('teachMateloggedinUser')
