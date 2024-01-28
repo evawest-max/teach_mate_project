@@ -118,7 +118,7 @@ function HomePage(){
                     <input onChange={findTask} ref={inputRef} type="text" placeholder="search" className="search-input"/>
                     <button onClick={openCreateForms} className="start-create-task-button">Create Task</button>
                 </div>
-                <p className="intro-text">Get ready to tackle all task you are working on</p>
+                <p className="intro-text">Get ready to tackle all the task you are working on</p>
             </div> 
             <div className='filter-container'>
                 <button className='completed-task' style={completedTaskBackgound} onClick={filterByCompletedTask}>completed task</button>
