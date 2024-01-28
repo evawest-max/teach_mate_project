@@ -50,8 +50,8 @@ export default function Task(props) {
       <div className='task-title-duedate-container'>
         <h3 className='task-title'>{props.title}</h3>
         <div className='status-container'>
-        <p className='task-duedate'>Due on: {props.date}</p>
-        {props.pending? <p className='status'> Status: pending</p> :<p className='status'>Status: Completed</p>}
+        <p className='task-duedate'><b>Due on:</b>  {props.date}</p>
+        {props.pending? <p className='status'><b>Status:</b>  pending</p> :<p className='status'><b>Status:</b> Completed</p>}
         </div>
       </div>
       <p className='task-discription'>{props.discription}</p>
