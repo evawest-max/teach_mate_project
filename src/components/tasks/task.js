@@ -82,7 +82,7 @@ function undoStatus(){
 }
  
   function deleteTask(){
-    alert(<div>
+    setDeletestate(<div>
       <h3>Are you sure?</h3>
       <div>
         <button onClick={deleteTaskFromDatabase}>yes</button>
