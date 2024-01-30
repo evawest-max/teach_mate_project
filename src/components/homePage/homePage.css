@@ -133,5 +133,10 @@
         gap: 2rem;
         text-align: center;
     }  
+    .copyright-para{
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
 }
 

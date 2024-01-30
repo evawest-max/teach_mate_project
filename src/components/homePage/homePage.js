@@ -9,6 +9,7 @@ import { TaskContext } from "../context/appContext";
 import SigninPage from "../signinPage/SigninPage";
 import SignUp from "../Sign-up/signUp";
 import { getDatabase, onValue, ref as refDatabase } from "firebase/database";
+import { FcCopyright } from "react-icons/fc";
 
 
 function HomePage(){
@@ -130,6 +131,7 @@ function HomePage(){
            <TaskForm/>
            <SigninPage/>
            <SignUp/>
+           <p className="copyright-para"><span><FcCopyright /></span> 2023 Ebunolwa Akinwumi. All Rights reserved</p>
         </div>
     )
 }

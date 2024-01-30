@@ -8,7 +8,7 @@
     position: relative;
     /* border: 3px solid red; */
     width: 100%;
-    box-shadow: 3px 3px 5px 0px rgb(32, 0, 128);
+    box-shadow: 3px 3px 15px 0px rgb(32, 0, 128);
 }
 .task-title-duedate-container{
     /* border: 3px solid red; */
@@ -42,6 +42,7 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
+    border: none;
 }
 .complete-task-button{
     background-color: rgb(32, 0, 128);
@@ -52,6 +53,7 @@
     position: absolute;
     bottom: 0px;
     font-size: 100%;
+    border: none;
 }
 
 .edit-task-form-container {
@@ -229,5 +231,19 @@
         background: transparent;
     
         /* border-color: rgb(32, 0, 128); */
+    }
+    .undo-buttton{
+        border: none;
+        font-size: 150%;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px rgb(32, 0, 128);
+        /* animation: App-logo-spin 5s infinite; */
+    }
+    .it{
+        margin-top: 4px;
+        animation: App-logo-spin 5s infinite;
+    }
+    .undo-buttton span :hover{
+        background-color: rgb(70, 70, 252);
     }
 }
