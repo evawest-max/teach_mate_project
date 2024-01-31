@@ -157,7 +157,7 @@
         height: 40px;
         border-radius: 10px;
         position: absolute;
-        bottom: 0px;
+        bottom: 3px;
         left: 0px;
     }
     .complete-task-button{
@@ -167,7 +167,7 @@
         height: 40px;
         border-radius: 10px;
         position: absolute;
-        bottom: 0px;
+        bottom: 1px;
     }
     
     .edit-task-form-container {
